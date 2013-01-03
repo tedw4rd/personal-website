@@ -1,21 +1,12 @@
-{% extends 'foundation_wrapper.html' %}
+{% extends 'styles_wrapper.html' %}
 {% block body %}
 <div class="row">
-	<nav class="top-bar">
-		<ul>
-			<li class="name"><h1><a href="#">Title</a></h1></li>
-			<li class="toggle-topbar"><a href="#"></a></li>
+	<div class="row">
+		<ul class="breadcrumbs">
+			<li><a href="/">Ted Aronson</a></li>
+			<li class="current"><a href="/">Networds</a></li>
 		</ul>
-		<section>
-			<ul class="left">
-				<li><a href="#">Link</a></li>
-			</ul>
-
-			<ul class="right">
-				<li><a href="#">Link</a></li>
-			</ul>
-		</section>
-	</nav>
+	</div>
 		{% block content %}{% endblock %}
 </div>
 {% endblock %}

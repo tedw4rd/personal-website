@@ -1,0 +1,9 @@
+ul.breadcrumbs li:before { content: ">"; color: #aaa; }
+.block-grid > li { padding-bottom: 15px; padding-top: 15px; padding: 0;}
+
+.linkbox { height: 250px; width:250px; background: #000; border: solid 3px #333; margin: 20px; padding: 10px}
+
+.linkbox a { color: #0DF;  font-size: 26px; font-weight: bold}
+.linkbox p { color: #0AF;}
+
+body { background-color: #121414}

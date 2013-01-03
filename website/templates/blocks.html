@@ -1,0 +1,28 @@
+{% extends 'styles_wrapper.html' %}
+{% block body %}
+<div class="row">
+	<div class="row">
+		<ul class="breadcrumbs">
+			<li><a href="/">Ted Aronson</a></li>
+			{% for crumb in trail %}
+			<li {% if crumb.current %}class="current"{% endif %}><a href="{{ crumb.link }}">{{ crumb.text }}</a></li>
+			{% endfor %}
+		</ul>
+	</div>
+	<div class="row">
+		<div class="twelve columns centered">
+			<ul class="block-grid three-up">
+				{% for link in links %}
+				<li>
+					<div class="linkbox">
+						<a href="{{ link.url }}">> {{ link.text }}_</a>
+						<p>{{ link.description }}</p>
+					</div>
+				</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+</div>
+
+{% endblock %}
