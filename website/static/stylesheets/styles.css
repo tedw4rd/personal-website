@@ -1,9 +1,13 @@
-ul.breadcrumbs li:before { content: ">"; color: #aaa; }
+ul.breadcrumbs { border:0; border-bottom: dashed 3px #0DF; padding-bottom: 0px; background-color:#121414; -webkit-border-radius: 0px; -moz-border-radius: 0px; -ms-border-radius: 0px; -o-border-radius: 0px; border-radius: 0px; }
+ul.breadcrumbs li:before { content: ">"; color: #0DF; font-weight: bold; font-size: 26px }
+ul.breadcrumbs li { padding:0; margin: 0 }
+ul.breadcrumbs li a, ul.breadcrumbs li span {padding-left: 0; font-weight: bold; font-size: 26px; color: #0DF;}
+ul.breadcrumbs li:last-child:after { content: "{}"; color: #0DF; font-weight: bold; font-size: 26px }
 .block-grid > li { padding-bottom: 15px; padding-top: 15px; padding: 0;}
 
 .linkbox { height: 250px; width:250px; background: #000; border: solid 3px #333; margin: 20px; padding: 10px}
 
-.linkbox a { color: #0DF;  font-size: 26px; font-weight: bold}
+.linkbox a { color: #0DF;  font-size: 22px; font-weight: bold; text-transform: uppercase;}
 .linkbox p { color: #0AF;}
 
 body { background-color: #121414}
