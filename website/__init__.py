@@ -23,7 +23,7 @@ admin.add_view(ModelView(Link, db.session))
 
 @app.route("/")
 def show_home():
-    cat_query = LinkCategory.query.all()
+    cat_query = LinkCategory.query.order_by(LinkCategory.rank)
     all_cats = []
     for cat in cat_query:
         all_cats.append({"text": cat.name, "url":"/" + cat.stub, "description":""})
@@ -35,8 +35,9 @@ def show_category(stub):
     cat = LinkCategory.query.filter_by(stub=stub).first()
     if cat is None:
         abort(404)
+    links = Link.query.filter_by(category_id=cat.id).order_by(Link.rank)
     display_links = []
-    for l in cat.links:
+    for l in links:
         display_links.append({"text":l.display_text, "url":l.url, "description":l.description})
 
     return render_template("blocks.html", links=display_links, trail=[{"link": stub, "text":cat.name, "current":False},{"link": stub, "text":"ALL", "current":True}])
@@ -47,9 +48,9 @@ def show_category(stub):
     cat = LinkCategory.query.filter_by(stub=stub).first()
     if cat is None:
         abort(404)
-    links = cat.links[:5]
+    links = Link.query.filter_by(category_id=cat.id).order_by(Link.rank)
     display_links = []
-    for l in links:
+    for l in links[:5]:
         display_links.append({"text":l.display_text, "url":l.url, "description":l.description})
 
     if len(links) > 5:
