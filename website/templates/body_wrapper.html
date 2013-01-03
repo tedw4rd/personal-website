@@ -4,7 +4,9 @@
 	<div class="row">
 		<ul class="breadcrumbs">
 			<li><a href="/">Ted Aronson</a></li>
-			<li class="current"><a href="/">Networds</a></li>
+			{% for crumb in trail %}
+			<li {% if crumb.current %}class="current"{% endif %}><a href="{{ crumb.link }}">{{ crumb.text }}</a></li>
+			{% endfor %}
 		</ul>
 	</div>
 		{% block content %}{% endblock %}

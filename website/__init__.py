@@ -30,6 +30,11 @@ def show_home():
     return render_template("blocks.html", links=all_cats, trail=[])
 
 
+@app.route("/about")
+def show_about():
+    return render_template("about.html", links=[], trail=[{"link": "/about", "text":"ABOUT", "current":True}])
+
+
 @app.route("/<stub>/all")
 def show_category(stub):
     cat = LinkCategory.query.filter_by(stub=stub).first()
@@ -53,7 +58,7 @@ def show_category(stub):
     for l in links[:5]:
         display_links.append({"text":l.display_text, "url":l.url, "description":l.description})
 
-    if len(links) > 5:
+    if len(links.all()) > 5:
         display_links.append({"text":"ALL", "url":"/%s/%s" % (stub, "all"), "description": ""})
 
     return render_template("blocks.html", links=display_links, trail=[{"link": stub, "text":cat.name, "current":True}])

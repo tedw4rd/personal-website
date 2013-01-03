@@ -1,14 +1,5 @@
-{% extends 'styles_wrapper.html' %}
-{% block body %}
-<div class="row">
-	<div class="row">
-		<ul class="breadcrumbs">
-			<li><a href="/">Ted Aronson</a></li>
-			{% for crumb in trail %}
-			<li {% if crumb.current %}class="current"{% endif %}><a href="{{ crumb.link }}">{{ crumb.text }}</a></li>
-			{% endfor %}
-		</ul>
-	</div>
+{% extends 'body_wrapper.html' %}
+{% block content %}
 	<div class="row">
 		<div class="twelve columns centered">
 			<ul class="block-grid three-up">
@@ -23,6 +14,4 @@
 			</ul>
 		</div>
 	</div>
-</div>
-
 {% endblock %}

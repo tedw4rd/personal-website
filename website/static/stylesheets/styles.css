@@ -5,9 +5,11 @@ ul.breadcrumbs li a, ul.breadcrumbs li span {padding-left: 0; font-weight: bold;
 ul.breadcrumbs li:last-child:after { content: "{}"; color: #0DF; font-weight: bold; font-size: 26px }
 .block-grid > li { padding-bottom: 15px; padding-top: 15px; padding: 0;}
 
-.linkbox { height: 250px; width:250px; background: #000; border: solid 3px #333; margin: 20px; padding: 10px}
+.linkbox { height: 250px; width:250px; background: #242828; border: solid 3px #0BF; margin: 20px; padding: 10px}
 
 .linkbox a { color: #0DF;  font-size: 22px; font-weight: bold; text-transform: uppercase;}
 .linkbox p { color: #0AF;}
 
-body { background-color: #121414}
+body { background-color: #121414 }
+p { color: #0AF;}
+h1  { color: #0DF;}
