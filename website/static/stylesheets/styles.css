@@ -5,7 +5,7 @@ ul.breadcrumbs li a, ul.breadcrumbs li span {padding-left: 0; font-weight: bold;
 ul.breadcrumbs li:last-child:after { content: "{}"; color: #0DF; font-weight: bold; font-size: 26px }
 .block-grid > li { padding-bottom: 15px; padding-top: 15px; padding: 0;}
 
-.linkbox { height: 150px; width:150px; background: #242828; border: solid 3px #0BF; margin: 20px; padding: 10px}
+.linkbox { height: 250px; width:250px; background: #242828; border: solid 3px #0BF; margin: 20px; padding: 10px}
 
 .linkbox a { color: #0DF;  font-size: 18px; font-weight: bold; text-transform: uppercase;}
 .linkbox p { color: #0AF; font-size: 10px; }
