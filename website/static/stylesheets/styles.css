@@ -2,7 +2,7 @@ ul.breadcrumbs { border:0; border-bottom: dashed 3px #0DF; padding-bottom: 0px; 
 ul.breadcrumbs li:before { content: ">"; color: #0DF; font-weight: bold; font-size: 26px }
 ul.breadcrumbs li { padding:0; margin: 0 }
 ul.breadcrumbs li a, ul.breadcrumbs li span {padding-left: 0; font-weight: bold; font-size: 26px; color: #0DF;}
-ul.breadcrumbs li:last-child:after { content: " ¦"; color: #0DF; font-weight: bold; font-size: 26px }
+ul.breadcrumbs li:last-child:after { content: " &#9608;"; color: #0DF; font-weight: bold; font-size: 26px }
 .block-grid > li { padding-bottom: 15px; padding-top: 15px; padding: 0;}
 
 .linkbox { height: 250px; width:250px; background: #242828; border: solid 3px #0BF; margin: 20px; padding: 10px}
